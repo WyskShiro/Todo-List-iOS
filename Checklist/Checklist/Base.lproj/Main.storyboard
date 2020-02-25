@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uL1-sp-6AT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tqc-xk-Wq5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklist View Controller-->
+        <!--Checklists-->
         <scene sceneID="Rmj-Td-P13">
             <objects>
                 <tableViewController id="uL1-sp-6AT" customClass="ChecklistViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,24 +16,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="ZTE-2V-mOe">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZTE-2V-mOe" id="QCe-Of-Bbc">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-3N-Hto">
-                                            <rect key="frame" x="20" y="11" width="342" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="342" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="cL4-3N-Hto" secondAttribute="bottom" constant="0.5" id="GNX-Hu-Nde"/>
-                                        <constraint firstItem="cL4-3N-Hto" firstAttribute="leading" secondItem="QCe-Of-Bbc" secondAttribute="leadingMargin" id="LIs-uw-f3N"/>
-                                        <constraint firstItem="cL4-3N-Hto" firstAttribute="top" secondItem="QCe-Of-Bbc" secondAttribute="topMargin" id="RKP-hl-avx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cL4-3N-Hto" secondAttribute="trailing" id="pEm-dJ-ZPo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cL4-3N-Hto" secondAttribute="bottom" priority="750" constant="0.5" id="GNX-Hu-Nde"/>
+                                        <constraint firstItem="cL4-3N-Hto" firstAttribute="leading" secondItem="QCe-Of-Bbc" secondAttribute="leadingMargin" priority="750" id="LIs-uw-f3N"/>
+                                        <constraint firstItem="cL4-3N-Hto" firstAttribute="top" secondItem="QCe-Of-Bbc" secondAttribute="topMargin" priority="750" id="RKP-hl-avx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cL4-3N-Hto" secondAttribute="trailing" priority="750" id="pEm-dJ-ZPo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -43,10 +43,36 @@
                             <outlet property="delegate" destination="uL1-sp-6AT" id="Zue-Hz-uGM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Checklists" id="jXF-lC-doh">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Wow-xC-ccc">
+                            <connections>
+                                <action selector="addItem:" destination="uL1-sp-6AT" id="3ZF-sC-Pki"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4T-DV-4dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="83"/>
+            <point key="canvasLocation" x="955" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c3l-Ji-6oI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tqc-xk-Wq5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8uV-8s-5qA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uL1-sp-6AT" kind="relationship" relationship="rootViewController" id="Nxd-Ou-MPh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyf-FK-MGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="82.366071428571431"/>
         </scene>
     </scenes>
 </document>

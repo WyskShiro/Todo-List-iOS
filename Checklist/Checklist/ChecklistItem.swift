@@ -11,9 +11,10 @@ import Foundation
 class ChecklistItem {
     
     var text: String
-    var checked = true
+    var checked: Bool
 
-    init(text: String) {
+    init(text: String, checked: Bool = false) {
         self.text = text
+        self.checked = checked
     }
 }

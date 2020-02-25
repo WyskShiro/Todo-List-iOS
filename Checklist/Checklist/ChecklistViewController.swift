@@ -20,27 +20,11 @@ class ChecklistViewController: UITableViewController {
         ChecklistItem(text: "Row 7"),
         ChecklistItem(text: "Row 8"),
         ChecklistItem(text: "Row 9"),
-        ChecklistItem(text: "Row 10"),
-        ChecklistItem(text: "Row 11"),
-        ChecklistItem(text: "Row 12"),
-        ChecklistItem(text: "Row 13"),
-        ChecklistItem(text: "Row 14"),
-        ChecklistItem(text: "Row 15"),
-        ChecklistItem(text: "Row 16"),
-        ChecklistItem(text: "Row 17"),
-        ChecklistItem(text: "Row 18"),
-        ChecklistItem(text: "Row 19"),
-        ChecklistItem(text: "Row 20"),
-        ChecklistItem(text: "Row 21"),
-        ChecklistItem(text: "Row 22"),
-        ChecklistItem(text: "Row 23"),
-        ChecklistItem(text: "Row 24"),
-        ChecklistItem(text: "Row 25"),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,11 +50,31 @@ class ChecklistViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        rows.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        let randomTitles = [
+            "Random title 1",
+            "Random title 2",
+            "Random title 3",
+            "Random title 4",
+            "Random title 5",
+        ]
+        let randomIndex = Int.random(in: 0..<randomTitles.count)
+        rows.append(ChecklistItem(text: randomTitles[randomIndex], checked: true))
+        let indexPath = IndexPath(row: rows.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
     func configureCheckmark(for cell: UITableViewCell, at checklistItem: ChecklistItem) {
         if checklistItem.checked {
-            cell.accessoryType = .none
-        } else {
             cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
         }
     }
 }
