@@ -14,6 +14,7 @@
 		919502F22404983200B39504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919502F02404983200B39504 /* Main.storyboard */; };
 		919502F42404983500B39504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919502F32404983500B39504 /* Assets.xcassets */; };
 		919502F72404983500B39504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919502F52404983500B39504 /* LaunchScreen.storyboard */; };
+		91CC18522405E703005B0FD9 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CC18512405E703005B0FD9 /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		919502F32404983500B39504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		919502F62404983500B39504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		919502F82404983500B39504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91CC18512405E703005B0FD9 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				919502F32404983500B39504 /* Assets.xcassets */,
 				919502F52404983500B39504 /* LaunchScreen.storyboard */,
 				919502F82404983500B39504 /* Info.plist */,
+				91CC18512405E703005B0FD9 /* ItemDetailViewController.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				919502EF2404983200B39504 /* ChecklistViewController.swift in Sources */,
+				91CC18522405E703005B0FD9 /* ItemDetailViewController.swift in Sources */,
 				919502EB2404983200B39504 /* AppDelegate.swift in Sources */,
 				919502ED2404983200B39504 /* SceneDelegate.swift in Sources */,
 				915D30512404A471007E0267 /* ChecklistItem.swift in Sources */,
